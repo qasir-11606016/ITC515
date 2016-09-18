@@ -38,18 +38,18 @@ public class UnitManager {
 				iu = new Unit(el.getAttributeValue("uid"),
 						el.getAttributeValue("name"), Float.valueOf(
 								el.getAttributeValue("ps")).floatValue(), Float
-								.valueOf(el.getAttributeValue("cr"))
-								.floatValue(), Float.valueOf(
+						.valueOf(el.getAttributeValue("cr"))
+						.floatValue(), Float.valueOf(
 								el.getAttributeValue("di")).floatValue(), Float
-								.valueOf(el.getAttributeValue("hd"))
-								.floatValue(), Float.valueOf(
+						.valueOf(el.getAttributeValue("hd"))
+						.floatValue(), Float.valueOf(
 								el.getAttributeValue("ae")).floatValue(),
 						Integer.valueOf(el.getAttributeValue("asg1wgt"))
-								.intValue(), Integer.valueOf(
+						.intValue(), Integer.valueOf(
 								el.getAttributeValue("asg2wgt")).intValue(),
 						Integer.valueOf(el.getAttributeValue("examwgt"))
-								.intValue(), StudentUnitRecordManager
-								.instance().getRecordsByUnit(unitCode));
+						.intValue(), StudentUnitRecordManager
+						.instance().getRecordsByUnit(unitCode));
 				UM.put(iu.getUnitCode(), iu);
 				return iu;
 			}
