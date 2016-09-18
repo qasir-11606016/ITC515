@@ -1,8 +1,8 @@
 package datamanagement;
-<<<<<<< HEAD
-//main java class where code start to run 
-=======
-//main class where it is execute 
->>>>>>> refs/remotes/origin/master
+//main java class where
 public class Main {
-    public static void main(String[] p) {new cgCTL().execute();}    }
+	public static void main(String[] p) {
+
+		new cgCTL().execute();
+	}
+}
