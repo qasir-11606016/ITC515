@@ -22,7 +22,8 @@ public class StudentManager {
 	}
 
 	private Element getStudentElement(Integer id) {
-		for (Element el : (List<Element>) XMLManager.getXML().getDocument().getRootElement().getChild("studentTable").getChildren("student")) 
+		for (Element el : (List<Element>) XMLManager.getXML().getDocument()
+				.getRootElement().getChild("studentTable").getChildren("student")) 
 			if (id.toString().equals(el.getAttributeValue("sid"))) 
 				return el;return null;
 	}
@@ -30,13 +31,17 @@ public class StudentManager {
 		IStudent is;
 		Element el = getStudentElement(id);
 		if (el != null) {
-			StudentUnitRecordList rlist = StudentUnitRecordManager.instance().getRecordsByStudent(id);
-			is = new Student(new Integer(el.getAttributeValue("sid")),el.getAttributeValue("fname"),el.getAttributeValue("lname"),rlist);
+			StudentUnitRecordList rlist = StudentUnitRecordManager.instance().
+					getRecordsByStudent(id);
+			is = new Student(new Integer(el.getAttributeValue("sid")),
+					el.getAttributeValue("fname"),el.getAttributeValue("lname"),
+					rlist);
 
 
 			sm.put(is.getID(), is);
 			return is; }
-		throw new RuntimeException("DBMD: createStudent : student not in file");}
+		throw new RuntimeException("DBMD: createStudent : student not in file");
+		}
 	private IStudent createStudentProxy(Integer id) {
 		Element el = getStudentElement(id);
 
@@ -45,7 +50,8 @@ public class StudentManager {
 
 
 
-		if (el != null) return new StudentProxy(id, el.getAttributeValue("fname"), el.getAttributeValue("lname"));
+		if (el != null) return new StudentProxy(id, el.getAttributeValue("fname"), 
+				el.getAttributeValue("lname"));
 		throw new RuntimeException("DBMD: createStudent : student not in file");}
 
 	public StudentMap getStudentsByUnit(String uc) {
@@ -59,19 +65,14 @@ public class StudentManager {
 
 		s = new StudentMap();
 		IStudent is;
-		StudentUnitRecordList ur = StudentUnitRecordManager.instance().getRecordsByUnit(uc);
+		StudentUnitRecordList ur = StudentUnitRecordManager.instance()
+				.getRecordsByUnit(uc);
 		for (IStudentUnitRecord S : ur) {
-
-
-
-
-
-
-
 
 
 			is = createStudentProxy(new Integer(S.getStudentID()));
 			s.put(is.getID(), is);}
 		um.put( uc, s);
 		return s;
-	}}
+	}
+	}
