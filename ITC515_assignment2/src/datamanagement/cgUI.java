@@ -1,8 +1,14 @@
 package datamanagement;
+/* Student Name :Muhammad Qasir Ali
+ * student id :11606012
+ * lecture :Sir recep
+ * auhtor  Muhammad qasir ali 
+ * */
 import javax.swing.JLabel;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
@@ -11,8 +17,8 @@ import java.awt.event.KeyEvent;
 public class cgUI extends javax.swing.JFrame implements IUnitLister,
 IStudentLister {
 	private cgCTL ctl;
-	private javax.swing.DefaultComboBoxModel uM;
-	private javax.swing.DefaultComboBoxModel rM;
+	private javax.swing.DefaultComboBoxModel comboBox;
+	private javax.swing.DefaultComboBoxModel comboBox2;
 	float f1;
 	float f2;
 	float f3;
@@ -20,11 +26,11 @@ IStudentLister {
 
 	public cgUI(cgCTL ctl) {
 		this.ctl = ctl;
-		uM = new javax.swing.DefaultComboBoxModel(new String[0]);
-		rM = new javax.swing.DefaultComboBoxModel(new String[0]);
+		comboBox = new javax.swing.DefaultComboBoxModel(new String[0]);
+		comboBox2 = new javax.swing.DefaultComboBoxModel(new String[0]);
 		initComponents();
-		jComboBox1.setModel(uM);
-		jComboBox2.setModel(rM);
+		jComboBox1.setModel(comboBox);
+		jComboBox2.setModel(comboBox2);
 		jlabel6.setText("");
 	}
 
@@ -60,7 +66,7 @@ IStudentLister {
 
 		jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Unit"));
 
-		jComboBox1.setModel(uM);
+		jComboBox1.setModel(comboBox);
 		jComboBox1.addItemListener(new java.awt.event.ItemListener() {
 			public void itemStateChanged(java.awt.event.ItemEvent evt) {
 				jComboBox1ItemStateChanged(evt);
@@ -94,7 +100,7 @@ IStudentLister {
 		jPanel2.setBorder(javax.swing.BorderFactory
 				.createTitledBorder("Student"));
 
-		jComboBox2.setModel(rM);
+		jComboBox2.setModel(comboBox2);
 		jComboBox2.addItemListener(new java.awt.event.ItemListener() {
 			public void itemStateChanged(java.awt.event.ItemEvent evt) {
 				jComboBox2ItemStateChanged(evt);
@@ -180,21 +186,25 @@ IStudentLister {
 										.addContainerGap()
 										.addComponent(jLabel2)
 										.addPreferredGap(ComponentPlacement.RELATED)
-										.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
+										.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 
+												59, GroupLayout.PREFERRED_SIZE)
 										.addGap(18)
 										.addComponent(jLabel3))
 								.addGroup(jPanel3Layout.createSequentialGroup()
 										.addGap(85)
-										.addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)))
+										.addComponent(jButton1, GroupLayout.
+												PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)))
 						.addGap(18)
 						.addGroup(jPanel3Layout.createParallelGroup(Alignment.TRAILING)
 								.addGroup(jPanel3Layout.createSequentialGroup()
-										.addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
+										.addComponent(jTextField2, GroupLayout.
+												PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
 										.addGap(18)
 										.addComponent(jLabel4))
 								.addComponent(jButton2))
 						.addGap(18)
-						.addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 59, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 59,
+								GroupLayout.PREFERRED_SIZE)
 						.addGap(15))
 				);
 		jPanel3Layout.setVerticalGroup(
@@ -202,11 +212,14 @@ IStudentLister {
 				.addGroup(jPanel3Layout.createSequentialGroup()
 						.addGroup(jPanel3Layout.createParallelGroup(Alignment.BASELINE)
 								.addComponent(jLabel2)
-								.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE,
+										GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(jLabel3)
-								.addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 
+										GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(jLabel4)
-								.addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 
+										GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(ComponentPlacement.UNRELATED)
 						.addGroup(jPanel3Layout.createParallelGroup(Alignment.BASELINE)
 								.addComponent(jButton1)
@@ -366,13 +379,13 @@ IStudentLister {
 	}// GEN-LAST:event_jButton2ActionPerformed
 
 	public void clearUnits() {
-		uM.removeAllElements();
-		uM.addElement("<none selected>");
+		comboBox.removeAllElements();
+		comboBox.addElement("<none selected>");
 		clearStudents();
 	}
 
 	public void addUnit(IUnit u) {
-		uM.addElement(u.getUnitCode());
+		comboBox.addElement(u.getUnitCode());
 	}
 
 	public void setState1(boolean b) {
@@ -381,12 +394,12 @@ IStudentLister {
 	}
 
 	public void clearStudents() {
-		rM.removeAllElements();
-		rM.addElement("<none selected>");
+		comboBox2.removeAllElements();
+		comboBox2.addElement("<none selected>");
 	}
 
 	public void addStudent(IStudent student) {
-		rM.addElement(student.getID().toString() + " : "
+		comboBox2.addElement(student.getID().toString() + " : "
 				+ student.getFirstName() + " " + student.getLastName());
 	}
 
