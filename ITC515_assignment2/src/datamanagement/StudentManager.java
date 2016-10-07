@@ -11,7 +11,8 @@ public class StudentManager {
 	private static StudentManager self = null;
 
 
-	private StudentMap sm;private java.util.HashMap<String, StudentMap> um;
+	private StudentMap studentMap_;
+	private java.util.HashMap<String, StudentMap> um;
 	public static StudentManager get() {
 		if (self == null) 
 
@@ -19,10 +20,10 @@ public class StudentManager {
 	private StudentManager() {
 
 
-		sm = new StudentMap();
+		studentMap_ = new StudentMap();
 		um = new java.util.HashMap<>();}
 	public IStudent getStudent(Integer id) {
-		IStudent is = sm.get(id);
+		IStudent is = studentMap_.get(id);
 		return is != null ? is : createStudent(id);
 	}
 
@@ -43,7 +44,7 @@ public class StudentManager {
 					rlist);
 
 
-			sm.put(is.getID(), is);
+			studentMap_.put(is.getID(), is);
 			return is; }
 		throw new RuntimeException("DBMD: createStudent : student not in file");
 		}
