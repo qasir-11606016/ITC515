@@ -15,7 +15,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 		this.sid = id;
 		this.uc = code;
 		this.setAssignment(asg1);
-		this.setAsg2(asg2);
+		this.setAssignment2(asg2);
 		this.setExam(exam);
 	}
 
@@ -41,7 +41,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 		return a1;
 	}
 
-	public void setAsg2(float a2) {
+	public void setAssignment2(float a2) {
 		if (a2 < 0 ||
 				a2 > UnitManager.UM().getUnit(uc).getAsg2Weight()) {
 			throw new RuntimeException("Mark cannot be less "

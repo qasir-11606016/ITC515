@@ -13,7 +13,7 @@ public interface IStudentUnitRecord {
 	public void setAssignment(float mark);
 	public float getAssigment();
 
-	public void setAsg2(float mark);
+	public void setAssignment2(float mark);
 	public float getAsg2();
 
 	public void setExam(float mark);
