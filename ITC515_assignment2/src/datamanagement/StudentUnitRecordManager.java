@@ -29,19 +29,19 @@ public class StudentUnitRecordManager {
 	}
 
 	private IStudentUnitRecord createStudentUnitRecord( Integer uid, String sid ) {
-		IStudentUnitRecord ir;
+		IStudentUnitRecord studentRecord;
 		for (Element el : (List<Element>) XMLManager.getXML().getDocument()
 				.getRootElement().getChild("studentUnitRecordTable").
 				getChildren("record")) {
 			if (uid.toString().equals(el.getAttributeValue("sid")) 
 					&& sid.equals(el.getAttributeValue("uid"))) {
-				ir = new StudentUnitRecord( new Integer(el.getAttributeValue("sid"))
+				studentRecord = new StudentUnitRecord( new Integer(el.getAttributeValue("sid"))
 						,el.getAttributeValue("uid"),
 						new Float(el.getAttributeValue("asg1")).floatValue(),
 						new Float(el.getAttributeValue("asg2")).floatValue(),
 						new Float(el.getAttributeValue("exam")).floatValue() );
-				studentUnitRecordMap.put(ir.getStudentID().toString()+ir.getUnitCode()
-				, ir);return ir;
+				studentUnitRecordMap.put(studentRecord.getStudentID().toString()+studentRecord.getUnitCode()
+				, studentRecord);return studentRecord;
 			}
 		}
 		throw new RuntimeException("DBMD: createStudent :"
