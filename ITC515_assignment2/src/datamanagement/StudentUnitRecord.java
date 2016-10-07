@@ -14,7 +14,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 			float exam) {
 		this.sid = id;
 		this.uc = code;
-		this.setAsg1(asg1);
+		this.setAssignment(asg1);
 		this.setAsg2(asg2);
 		this.setExam(exam);
 	}
@@ -27,7 +27,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 		return uc;
 	}
 
-	public void setAsg1(float a1) {
+	public void setAssignment(float a1) {
 		if (a1 < 0 ||
 				a1 > UnitManager.UM().getUnit(uc).getAsg1Weight()) {
 			throw new RuntimeException("Mark cannot be "

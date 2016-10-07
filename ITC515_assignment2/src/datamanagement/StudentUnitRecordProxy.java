@@ -18,8 +18,8 @@ public class StudentUnitRecordProxy implements IStudentUnitRecord {
 		public String getUnitCode() { 
 		return unitCode_; 
 	}
-		public void setAsg1(float mark) {
-		studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).setAsg1(mark);
+		public void setAssignment(float mark) {
+		studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).setAssignment(mark);
 		}
 	public float getAsg1() 
 	{

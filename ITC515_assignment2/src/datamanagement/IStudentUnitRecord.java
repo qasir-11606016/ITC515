@@ -10,7 +10,7 @@ public interface IStudentUnitRecord {
 	public Integer getStudentID();
 	public String getUnitCode();
 
-	public void setAsg1(float mark);
+	public void setAssignment(float mark);
 	public float getAsg1();
 
 	public void setAsg2(float mark);
