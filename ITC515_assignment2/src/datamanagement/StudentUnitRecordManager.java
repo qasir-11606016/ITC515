@@ -11,20 +11,20 @@ import org.jdom.*;
 public class StudentUnitRecordManager {
 
 	private static StudentUnitRecordManager studentUnitRecordManager_ = null;
-	private StudentUnitRecordMap rm;
+	private StudentUnitRecordMap studentUnitRecordMap;
 	private java.util.HashMap<String,StudentUnitRecordList> ur;
 	private java.util.HashMap<Integer,StudentUnitRecordList> sr;
 	public static StudentUnitRecordManager instance() {
 		if (studentUnitRecordManager_ == null ) studentUnitRecordManager_ = new StudentUnitRecordManager(); return studentUnitRecordManager_;
 	}
 	private StudentUnitRecordManager() {
-		rm = new StudentUnitRecordMap();
+		studentUnitRecordMap = new StudentUnitRecordMap();
 		ur = new java.util.HashMap<>();
 		sr = new java.util.HashMap<>();
 	}
 	public IStudentUnitRecord getStudentUnitRecord( Integer studentID,
 			String unitCode ) {
-		IStudentUnitRecord ir = rm.get(studentID.toString()+unitCode);
+		IStudentUnitRecord ir = studentUnitRecordMap.get(studentID.toString()+unitCode);
 		return ir != null ? ir : createStudentUnitRecord(studentID, unitCode);
 	}
 
@@ -40,7 +40,7 @@ public class StudentUnitRecordManager {
 						new Float(el.getAttributeValue("asg1")).floatValue(),
 						new Float(el.getAttributeValue("asg2")).floatValue(),
 						new Float(el.getAttributeValue("exam")).floatValue() );
-				rm.put(ir.getStudentID().toString()+ir.getUnitCode()
+				studentUnitRecordMap.put(ir.getStudentID().toString()+ir.getUnitCode()
 				, ir);return ir;
 			}
 		}
