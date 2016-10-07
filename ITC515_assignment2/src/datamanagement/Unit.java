@@ -6,7 +6,7 @@
 package datamanagement;
 
 public class Unit implements IUnit {
-	private String uc_;
+	private String unitCode_;
 	private String UN_;
 	private float co2_;
 	private float co1_;
@@ -20,7 +20,7 @@ public class Unit implements IUnit {
 	public Unit(String UC, String un, float f1, float f2, float f3, float f4,
 			float f5, int i1, int i2, int i3, StudentUnitRecordList rl) {
 
-		uc_ = UC;
+		unitCode_ = UC;
 		UN_ = un;
 		co2_ = f1;
 		co1_ = f2;
@@ -32,7 +32,7 @@ public class Unit implements IUnit {
 	}
 
 	public String getUnitCode() {
-		return this.uc_;
+		return this.unitCode_;
 	}
 
 	public String getUnitName() {
