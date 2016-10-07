@@ -6,7 +6,7 @@
 package datamanagement;
 
 public class Student implements IStudent {
-	private Integer id;
+	private Integer id_;
 	private String firstName_;
 	private String lastName_;
 	private StudentUnitRecordList studentUnitRecordList_;
