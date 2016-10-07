@@ -9,19 +9,15 @@
 		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
 			<item value="1"/>
-			<item value="1"/>
 		</list>
 		<list key="orderedElements">
 			<item value="org.eclipse.egit.ui.RepositoriesViewAddRepository"/>
-			<item value="goInto"/>
 		</list>
 		<list key="orderedProviders">
 			<item value="org.eclipse.ui.commands"/>
-			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
 			<item value="git"/>
-			<item value="gi"/>
 		</list>
 	</section>
 </section>
