@@ -12,16 +12,18 @@ public class StudentManager {
 
 
 	private StudentMap studentMap_;
-	private java.util.HashMap<String, StudentMap> um;
+	private java.util.HashMap<String, StudentMap> unitMapped;
 	public static StudentManager get() {
 		if (self == null) 
 
-			self = new StudentManager(); return self; }
+			self = new StudentManager(); 
+		return self; 
+		}
 	private StudentManager() {
 
 
 		studentMap_ = new StudentMap();
-		um = new java.util.HashMap<>();}
+		unitMapped = new java.util.HashMap<>();}
 	public IStudent getStudent(Integer id) {
 		IStudent is = studentMap_.get(id);
 		return is != null ? is : createStudent(id);
@@ -61,7 +63,7 @@ public class StudentManager {
 		throw new RuntimeException("DBMD: createStudent : student not in file");}
 
 	public StudentMap getStudentsByUnit(String uc) {
-		StudentMap s = um.get(uc);
+		StudentMap s = unitMapped.get(uc);
 		if (s != null) 
 		{
 
@@ -78,7 +80,7 @@ public class StudentManager {
 
 			is = createStudentProxy(new Integer(S.getStudentID()));
 			s.put(is.getID(), is);}
-		um.put( uc, s);
+		unitMapped.put( uc, s);
 		return s;
 	}
 	}
