@@ -11,8 +11,9 @@ public class Student implements IStudent {
 	private String lastName_;
 	private StudentUnitRecordList studentUnitRecordList_;
 
-	public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { this.id_ = id; this.firstName_ = fn;
-	this.lastName_ = ln;this.studentUnitRecordList_ = 
+	public Student( Integer id, String firstName, String lastName, StudentUnitRecordList su ) { this.id_ = id; this.firstName_ = firstName;
+	this.lastName_ = lastName;
+	this.studentUnitRecordList_ = 
 			su == null ? new StudentUnitRecordList() : 
 				su;
 	}
