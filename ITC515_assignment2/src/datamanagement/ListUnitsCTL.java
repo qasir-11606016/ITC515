@@ -5,12 +5,12 @@
  * */
 package datamanagement;
 public class ListUnitsCTL {
-	private UnitManager um;
+	private UnitManager unitManger_;
 	public ListUnitsCTL() {
-		um = UnitManager.UM();
+		unitManger_ = UnitManager.UM();
 	}
 	public void listUnits( IUnitLister lister ) {
-		lister.clearUnits();UnitMap units = um.getUnits();
+		lister.clearUnits();UnitMap units = unitManger_.getUnits();
 		for (String s : units.keySet() )
 			lister.addUnit(units.get(s));
 		}
