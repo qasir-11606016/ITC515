@@ -10,12 +10,12 @@ import org.jdom.*;
 
 public class StudentUnitRecordManager {
 
-	private static StudentUnitRecordManager s = null;
+	private static StudentUnitRecordManager studentUnitRecordManager_ = null;
 	private StudentUnitRecordMap rm;
 	private java.util.HashMap<String,StudentUnitRecordList> ur;
 	private java.util.HashMap<Integer,StudentUnitRecordList> sr;
 	public static StudentUnitRecordManager instance() {
-		if (s == null ) s = new StudentUnitRecordManager(); return s;
+		if (studentUnitRecordManager_ == null ) studentUnitRecordManager_ = new StudentUnitRecordManager(); return studentUnitRecordManager_;
 	}
 	private StudentUnitRecordManager() {
 		rm = new StudentUnitRecordMap();
