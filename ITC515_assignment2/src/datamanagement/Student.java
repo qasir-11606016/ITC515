@@ -11,13 +11,13 @@ public class Student implements IStudent {
 	private String lastName_;
 	private StudentUnitRecordList studentUnitRecordList_;
 
-	public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { this.id = id; this.firstName_ = fn;
+	public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { this.id_ = id; this.firstName_ = fn;
 	this.lastName_ = ln;this.studentUnitRecordList_ = 
 			su == null ? new StudentUnitRecordList() : 
 				su;
 	}
 
-	public Integer getID() { return this.id; 
+	public Integer getID() { return this.id_; 
 	} 
 	public String getFirstName() { 
 		return firstName_; 
