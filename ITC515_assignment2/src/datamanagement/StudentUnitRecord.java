@@ -8,7 +8,7 @@ package datamanagement;
 public class StudentUnitRecord implements IStudentUnitRecord {
 	private Integer studentID_;
 	private String unitCode_;
-	private float assigment1_, assignment2_, examnation;
+	private float assigment1_, assignment2_, examnation_;
 
 	public StudentUnitRecord(Integer id, String code, float asg1, float asg2,
 			float exam) {
@@ -61,15 +61,15 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 			throw new RuntimeException("Mark cannot be less "
 					+ "than zero or greater than assessment weight");
 		}
-		this.examnation = ex;
+		this.examnation_ = ex;
 	}
 
 	public float getExam() {
-		return examnation;
+		return examnation_;
 	}
 
 	public float getTotal() {
-		return assigment1_ + assignment2_ + examnation;
+		return assigment1_ + assignment2_ + examnation_;
 
 	}
 }
