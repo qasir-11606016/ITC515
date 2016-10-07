@@ -12,12 +12,12 @@ public class StudentProxy implements IStudent {
 
 	private String Il;
 	private StudentManager lI;
-	public StudentProxy( Integer id, String fn, String lastname) {
+	public StudentProxy( Integer id, String firstName, String Il) {
 		this.id_ = id;
-		this.firstName_ = fn;
+		this.firstName_ = firstName;
 
 
-		this.Il = lastname;
+		this.Il = Il;
 		this.lI = StudentManager.get();
 		}
 
