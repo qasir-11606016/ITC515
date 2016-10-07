@@ -9,10 +9,10 @@ public class Student implements IStudent {
 	private Integer id;
 	private String firstName_;
 	private String lastName_;
-	private StudentUnitRecordList su_;
+	private StudentUnitRecordList studentUnitRecordList_;
 
 	public Student( Integer id, String fn, String ln, StudentUnitRecordList su ) { this.id = id; this.firstName_ = fn;
-	this.lastName_ = ln;this.su_ = 
+	this.lastName_ = ln;this.studentUnitRecordList_ = 
 			su == null ? new StudentUnitRecordList() : 
 				su;
 	}
@@ -37,10 +37,10 @@ public class Student implements IStudent {
 		}
 
 	public void addUnitRecord( IStudentUnitRecord record ) { 
-		su_.add(record); 
+		studentUnitRecordList_.add(record); 
 		}
 	public IStudentUnitRecord getUnitRecord( String unitCode ) {
-		for ( IStudentUnitRecord r : su_ ) {
+		for ( IStudentUnitRecord r : studentUnitRecordList_ ) {
 			if ( r.getUnitCode().equals(unitCode)) 
 				return r; 
 		}
@@ -49,6 +49,6 @@ public class Student implements IStudent {
 	}
 
 	public StudentUnitRecordList getUnitRecords() { 
-		return su_;
+		return studentUnitRecordList_;
 		}
 	}
