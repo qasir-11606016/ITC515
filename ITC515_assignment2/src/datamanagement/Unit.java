@@ -15,7 +15,7 @@ public class Unit implements IUnit {
 	private float co5_;
 	private int a1_, a2_, ex_;
 
-	private StudentUnitRecordList rs;
+	private StudentUnitRecordList result;
 
 	public Unit(String UC, String un, float f1, float f2, float f3, float f4,
 			float f5, int i1, int i2, int i3, StudentUnitRecordList rl) {
@@ -28,7 +28,7 @@ public class Unit implements IUnit {
 		co3_ = f4;
 		this.co5_ = f5;
 		this.setAssessmentWeights(i1, i2, i3);
-		rs = rl == null ? new StudentUnitRecordList() : rl;
+		result = rl == null ? new StudentUnitRecordList() : rl;
 	}
 
 	public String getUnitCode() {
@@ -86,11 +86,11 @@ public class Unit implements IUnit {
 	}
 
 	public void addStudentRecord(IStudentUnitRecord record) {
-		rs.add(record);
+		result.add(record);
 	}
 
 	public IStudentUnitRecord getStudentRecord(int studentID) {
-		for (IStudentUnitRecord r : rs) {
+		for (IStudentUnitRecord r : result) {
 			if (r.getStudentID() == studentID)
 				return r;
 		}
@@ -98,7 +98,7 @@ public class Unit implements IUnit {
 	}
 
 	public StudentUnitRecordList listStudentRecords() {
-		return rs;
+		return result;
 	}
 
 	@Override
