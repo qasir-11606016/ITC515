@@ -2,7 +2,8 @@ package datamanagement;
 /* Student Name :Muhammad Qasir Ali
  * student id :11606012
  * lecture :Sir recep
- * auhtor  Muhammad qasir ali 
+ * auhtor  Muhammad qasir ali
+ *  
  * */
 import java.util.*;
 import java.io.*;
