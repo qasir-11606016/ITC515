@@ -6,13 +6,13 @@
 package datamanagement;
 
 public class StudentUnitRecord implements IStudentUnitRecord {
-	private Integer sid;
+	private Integer studentID_;
 	private String uc;
 	private float a1, a2, ex;
 
 	public StudentUnitRecord(Integer id, String code, float asg1, float asg2,
 			float exam) {
-		this.sid = id;
+		this.studentID_ = id;
 		this.uc = code;
 		this.setAssignment(asg1);
 		this.setAssignment2(asg2);
@@ -20,7 +20,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	}
 
 	public Integer getStudentID() {
-		return sid;
+		return studentID_;
 	}
 
 	public String getUnitCode() {
