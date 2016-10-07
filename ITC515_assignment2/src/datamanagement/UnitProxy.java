@@ -12,7 +12,7 @@ public class UnitProxy implements IUnit {
 	public UnitProxy( String unitCode, String unitName ) {
 		this.UC_ = unitCode;
 		this.un_ = unitName;
-		um = UnitManager.UM(); 
+		um = UnitManager.unitManger(); 
 		}
 	public String getUnitCode() { 
 		return this.UC_;

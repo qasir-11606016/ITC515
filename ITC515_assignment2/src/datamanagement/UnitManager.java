@@ -14,7 +14,7 @@ public class UnitManager {
 
 	private UnitMap UM;
 
-	public static UnitManager UM() {
+	public static UnitManager unitManger() {
 		if (self == null)
 			self = new UnitManager();
 		return self;
