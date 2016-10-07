@@ -7,11 +7,11 @@ package datamanagement;
 public class StudentUnitRecordProxy implements IStudentUnitRecord {
 	private Integer studentID;
 	private String unitCode;
-	private StudentUnitRecordManager mngr;
+	private StudentUnitRecordManager studentUnitRecordManager_;
 	public StudentUnitRecordProxy( Integer id, String code ) 
 	{
 		this.studentID = id;this.unitCode = code;
-		this.mngr = StudentUnitRecordManager.instance();}
+		this.studentUnitRecordManager_ = StudentUnitRecordManager.instance();}
 	public Integer getStudentID() { 
 		return studentID;
 		}
@@ -19,27 +19,27 @@ public class StudentUnitRecordProxy implements IStudentUnitRecord {
 		return unitCode; 
 	}
 	public void setAsg1(float mark) {
-		mngr.getStudentUnitRecord( studentID, unitCode ).setAsg1(mark);
+		studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).setAsg1(mark);
 		}
 	public float getAsg1() 
 	{
-		return mngr.getStudentUnitRecord( studentID, unitCode ).getAsg1();
+		return studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).getAsg1();
 		}
 	public void setAsg2(float mark) { 
-		mngr.getStudentUnitRecord( studentID, unitCode ).setAsg2(mark);
+		studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).setAsg2(mark);
 		}
 	public float getAsg2() {
 		
-		return mngr.getStudentUnitRecord( studentID, unitCode ).getAsg2();
+		return studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).getAsg2();
 	}
 	public void setExam(float mark) {
-		mngr.getStudentUnitRecord( studentID, unitCode ).setExam(mark);
+		studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).setExam(mark);
 	}
 	public float getExam() 
 	{
-		return mngr.getStudentUnitRecord( studentID, unitCode ).getExam();
+		return studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).getExam();
 		}
 	public float getTotal() {
-		return mngr.getStudentUnitRecord( studentID, unitCode ).getTotal();
+		return studentUnitRecordManager_.getStudentUnitRecord( studentID, unitCode ).getTotal();
 		}
 	}
