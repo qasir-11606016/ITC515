@@ -36,7 +36,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 		this.a1 = a1;
 	}
 
-	public float getAsg1() {
+	public float getAssigment() {
 
 		return a1;
 	}

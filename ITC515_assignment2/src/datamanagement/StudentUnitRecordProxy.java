@@ -21,9 +21,9 @@ public class StudentUnitRecordProxy implements IStudentUnitRecord {
 		public void setAssignment(float mark) {
 		studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).setAssignment(mark);
 		}
-	public float getAsg1() 
+	public float getAssigment() 
 	{
-		return studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).getAsg1();
+		return studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).getAssigment();
 		}
 	public void setAsg2(float mark) { 
 		studentUnitRecordManager_.getStudentUnitRecord( studentID_, unitCode_ ).setAsg2(mark);

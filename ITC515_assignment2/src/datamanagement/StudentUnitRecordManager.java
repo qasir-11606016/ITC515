@@ -86,7 +86,7 @@ public class StudentUnitRecordManager {
 			if (irec.getStudentID().toString().
 					equals(el.getAttributeValue("sid")) && irec.getUnitCode().
 					equals(el.getAttributeValue("uid"))) {
-				el.setAttribute("asg1", new Float(irec.getAsg1()).toString());
+				el.setAttribute("asg1", new Float(irec.getAssigment()).toString());
 
 
 

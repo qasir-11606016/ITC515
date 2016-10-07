@@ -11,7 +11,7 @@ public interface IStudentUnitRecord {
 	public String getUnitCode();
 
 	public void setAssignment(float mark);
-	public float getAsg1();
+	public float getAssigment();
 
 	public void setAsg2(float mark);
 	public float getAsg2();
