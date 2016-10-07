@@ -7,13 +7,13 @@ package datamanagement;
 
 public class StudentUnitRecord implements IStudentUnitRecord {
 	private Integer studentID_;
-	private String uc;
+	private String unitCode_;
 	private float a1, a2, ex;
 
 	public StudentUnitRecord(Integer id, String code, float asg1, float asg2,
 			float exam) {
 		this.studentID_ = id;
-		this.uc = code;
+		this.unitCode_ = code;
 		this.setAssignment(asg1);
 		this.setAssignment2(asg2);
 		this.setExam(exam);
@@ -24,12 +24,12 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 	}
 
 	public String getUnitCode() {
-		return uc;
+		return unitCode_;
 	}
 
 	public void setAssignment(float a1) {
 		if (a1 < 0 ||
-				a1 > UnitManager.unitManger().getUnit(uc).getAsg1Weight()) {
+				a1 > UnitManager.unitManger().getUnit(unitCode_).getAsg1Weight()) {
 			throw new RuntimeException("Mark cannot be "
 					+ "less than zero or greater than assessment weight");
 		}
@@ -43,7 +43,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 
 	public void setAssignment2(float a2) {
 		if (a2 < 0 ||
-				a2 > UnitManager.unitManger().getUnit(uc).getAsg2Weight()) {
+				a2 > UnitManager.unitManger().getUnit(unitCode_).getAsg2Weight()) {
 			throw new RuntimeException("Mark cannot be less "
 					+ "than zero or greater than assessment weight");
 		}
@@ -57,7 +57,7 @@ public class StudentUnitRecord implements IStudentUnitRecord {
 
 	public void setExam(float ex) {
 		if (ex < 0 ||
-				ex > UnitManager.unitManger().getUnit(uc).getExamWeight()) {
+				ex > UnitManager.unitManger().getUnit(unitCode_).getExamWeight()) {
 			throw new RuntimeException("Mark cannot be less "
 					+ "than zero or greater than assessment weight");
 		}
