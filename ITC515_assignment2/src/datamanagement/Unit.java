@@ -7,7 +7,7 @@ package datamanagement;
 
 public class Unit implements IUnit {
 	private String unitCode_;
-	private String UN_;
+	private String unitName_;
 	private float co2_;
 	private float co1_;
 	private float co4_;
@@ -21,7 +21,7 @@ public class Unit implements IUnit {
 			float f5, int i1, int i2, int i3, StudentUnitRecordList rl) {
 
 		unitCode_ = UC;
-		UN_ = un;
+		unitName_ = un;
 		co2_ = f1;
 		co1_ = f2;
 		this.co4_ = f3;
@@ -37,7 +37,7 @@ public class Unit implements IUnit {
 
 	public String getUnitName() {
 
-		return this.UN_;
+		return this.unitName_;
 	}
 
 	public void setPsCutoff1(float cutoff) {
