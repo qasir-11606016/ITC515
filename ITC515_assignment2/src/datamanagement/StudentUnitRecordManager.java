@@ -41,7 +41,8 @@ public class StudentUnitRecordManager {
 						new Float(el.getAttributeValue("asg2")).floatValue(),
 						new Float(el.getAttributeValue("exam")).floatValue() );
 				studentUnitRecordMap.put(studentRecord.getStudentID().toString()+studentRecord.getUnitCode()
-				, studentRecord);return studentRecord;
+				, studentRecord);
+				return studentRecord;
 			}
 		}
 		throw new RuntimeException("DBMD: createStudent :"
