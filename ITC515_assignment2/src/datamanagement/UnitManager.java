@@ -1,3 +1,8 @@
+/* Student Name :Muhammad Qasir Ali
+ * student id :11606012
+ * lecture :Sir recep
+ * auhtor  Muhammad qasir ali 
+ * */
 package datamanagement;
 
 import java.util.List;
@@ -7,20 +12,20 @@ public class UnitManager {
 
 	private static UnitManager self = null;
 
-	private UnitMap UM;
+	private UnitMap unitMap_;
 
-	public static UnitManager UM() {
+	public static UnitManager unitManger() {
 		if (self == null)
 			self = new UnitManager();
 		return self;
 	}
 
 	private UnitManager() {
-		UM = new UnitMap();
+		unitMap_ = new UnitMap();
 	}
 
 	public IUnit getUnit(String uc) {
-		IUnit iu = UM.get(uc);
+		IUnit iu = unitMap_.get(uc);
 		return iu != null ? iu : createUnit(uc);
 
 	}
@@ -38,19 +43,19 @@ public class UnitManager {
 				iu = new Unit(el.getAttributeValue("uid"),
 						el.getAttributeValue("name"), Float.valueOf(
 								el.getAttributeValue("ps")).floatValue(), Float
-								.valueOf(el.getAttributeValue("cr"))
-								.floatValue(), Float.valueOf(
+						.valueOf(el.getAttributeValue("cr"))
+						.floatValue(), Float.valueOf(
 								el.getAttributeValue("di")).floatValue(), Float
-								.valueOf(el.getAttributeValue("hd"))
-								.floatValue(), Float.valueOf(
+						.valueOf(el.getAttributeValue("hd"))
+						.floatValue(), Float.valueOf(
 								el.getAttributeValue("ae")).floatValue(),
 						Integer.valueOf(el.getAttributeValue("asg1wgt"))
-								.intValue(), Integer.valueOf(
+						.intValue(), Integer.valueOf(
 								el.getAttributeValue("asg2wgt")).intValue(),
 						Integer.valueOf(el.getAttributeValue("examwgt"))
-								.intValue(), StudentUnitRecordManager
-								.instance().getRecordsByUnit(unitCode));
-				UM.put(iu.getUnitCode(), iu);
+						.intValue(), StudentUnitRecordManager
+						.instance().getRecordsByUnit(unitCode));
+				unitMap_.put(iu.getUnitCode(), iu);
 				return iu;
 			}
 

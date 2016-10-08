@@ -1,5 +1,9 @@
 package datamanagement;
-
+/* Student Name :Muhammad Qasir Ali
+ * student id :11606012
+ * lecture :Sir recep
+ * auhtor  Muhammad qasir ali 
+ * */
 public class cgCTL {
 
 	cgUI CGUI;
@@ -66,7 +70,7 @@ public class cgCTL {
 	}
 
 	public String checkGrade(float f, float g, float h) {
-		IUnit u = UnitManager.UM().getUnit(cuc);
+		IUnit u = UnitManager.unitManger().getUnit(cuc);
 		String s = u.getGrade(f, g, h);
 		CGUI.setState4(true);
 		CGUI.setState5(false);
@@ -85,12 +89,12 @@ public class cgCTL {
 
 	public void saveGrade(float asg1, float asg2, float exam) {
 
-		IUnit u = UnitManager.UM().getUnit(cuc);
+		IUnit u = UnitManager.unitManger().getUnit(cuc);
 		IStudent s = StudentManager.get().getStudent(currentStudentID);
 
 		IStudentUnitRecord r = s.getUnitRecord(cuc);
-		r.setAsg1(asg1);
-		r.setAsg2(asg2);
+		r.setAssignment(asg1);
+		r.setAssignment2(asg2);
 		r.setExam(exam);
 		StudentUnitRecordManager.instance().saveRecord(r);
 		CGUI.setState4(true);

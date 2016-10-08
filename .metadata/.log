@@ -1,0 +1,128 @@
+!SESSION 2016-09-19 07:50:13.921 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-09-19 07:54:48.624
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Qasir'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-09-19 08:04:22.213 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/Users/Qasir/Documents/GitHub/ITC515/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-09-19 08:04:38.544
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Qasir'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-09-20 10:34:38.284 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-09-20 10:35:35.388
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Qasir'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-09-21 17:29:00.755 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-09-21 17:29:17.901
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-09-21 17:29:55.270
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Qasir'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-09-23 10:01:53.325 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-09-23 10:02:21.276
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-09-23 10:03:32.572
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Qasir'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-09-23 10:41:24.265
+!MESSAGE https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+!STACK 1
+org.eclipse.core.runtime.CoreException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.egit.ui.internal.fetch.FetchOperationUI.execute(FetchOperationUI.java:106)
+	at org.eclipse.egit.ui.internal.synchronize.SynchronizeFetchJob.runInWorkspace(SynchronizeFetchJob.java:74)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.api.errors.TransportException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:135)
+	at org.eclipse.egit.core.op.FetchOperation.run(FetchOperation.java:136)
+	at org.eclipse.egit.ui.internal.fetch.FetchOperationUI.execute(FetchOperationUI.java:103)
+	... 3 more
+Caused by: org.eclipse.jgit.errors.TransportException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:491)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:288)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:136)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:122)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1179)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:128)
+	... 5 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2016-09-23 10:41:24.281
+!MESSAGE https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:135)
+	at org.eclipse.egit.core.op.FetchOperation.run(FetchOperation.java:136)
+	at org.eclipse.egit.ui.internal.fetch.FetchOperationUI.execute(FetchOperationUI.java:103)
+	at org.eclipse.egit.ui.internal.synchronize.SynchronizeFetchJob.runInWorkspace(SynchronizeFetchJob.java:74)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:491)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:288)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:136)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:122)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1179)
+	at org.eclipse.jgit.api.FetchCommand.call(FetchCommand.java:128)
+	... 5 more
+
+!ENTRY org.eclipse.egit.core 4 0 2016-09-23 11:30:18.952
+!MESSAGE An exception occurred during push on URI https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://shahidsewara@bitbucket.org/gfive/itc515_newlibrary.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:491)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:379)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:155)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1250)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:189)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:209)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)

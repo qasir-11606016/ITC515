@@ -1,91 +1,96 @@
+/* Student Name :Muhammad Qasir Ali
+ * student id :11606012
+ * lecture :Sir recep
+ * auhtor  Muhammad qasir ali 
+ * */
 package datamanagement;
 
 public class Unit implements IUnit {
-	private String uc;
-	private String UN;
-	private float co2;
-	private float co1;
-	private float co4;
-	private float co3;
-	private float co5;
-	private int a1, a2, ex;
-	
-	private StudentUnitRecordList rs;
+	private String unitCode_;
+	private String unitName_;
+	private float co2_;
+	private float co1_;
+	private float co4_;
+	private float co3_;
+	private float co5_;
+	private int a1_, a2_, ex_;
+
+	private StudentUnitRecordList result;
 
 	public Unit(String UC, String un, float f1, float f2, float f3, float f4,
 			float f5, int i1, int i2, int i3, StudentUnitRecordList rl) {
 
-		uc = UC;
-		UN = un;
-		co2 = f1;
-		co1 = f2;
-		this.co4 = f3;
-		co3 = f4;
-		this.co5 = f5;
+		unitCode_ = UC;
+		unitName_ = un;
+		co2_ = f1;
+		co1_ = f2;
+		this.co4_ = f3;
+		co3_ = f4;
+		this.co5_ = f5;
 		this.setAssessmentWeights(i1, i2, i3);
-		rs = rl == null ? new StudentUnitRecordList() : rl;
+		result = rl == null ? new StudentUnitRecordList() : rl;
 	}
 
 	public String getUnitCode() {
-		return this.uc;
+		return this.unitCode_;
 	}
 
 	public String getUnitName() {
 
-		return this.UN;
+		return this.unitName_;
 	}
 
 	public void setPsCutoff1(float cutoff) {
-		this.co2 = cutoff;
+		this.co2_ = cutoff;
 	}
 
 	public float getPsCutoff() {
-		return this.co2;
+		return this.co2_;
 	}
 
 	public void setCrCutoff(float cutoff) {
-		this.co1 = cutoff;
+		this.co1_ = cutoff;
 	}
 
 	public float getCrCutoff() {
-		return this.co1;
+		return this.co1_;
 	}
 
 	public void setDiCutoff(float cutoff) {
-		this.co4 = cutoff;
+		this.co4_ = cutoff;
 	}
 
 	public float getDiCuttoff() {
-		return this.co4;
+		return this.co4_;
 	}
 
 	public void HDCutoff(float cutoff) {
-		this.co3 = cutoff;
+		this.co3_ = cutoff;
 	}
 
 	public void setHdCutoff(float cutoff) {
-		this.co3 = cutoff;
+		this.co3_ = cutoff;
 	}
 
 	public float getHdCutoff() {
-		return this.co3;
+		return this.co3_;
 
 	}
 
 	public void setAeCutoff(float cutoff) {
-		this.co5 = cutoff;
+		this.co5_ = cutoff;
 	}
 
 	public float getAeCutoff() {
-		return this.co5;
+		return this.co5_;
 	}
 
 	public void addStudentRecord(IStudentUnitRecord record) {
-		rs.add(record);
+		result.add(record);
 	}
 
 	public IStudentUnitRecord getStudentRecord(int studentID) {
-		for (IStudentUnitRecord r : rs) {
+		for (IStudentUnitRecord r : result) {
 			if (r.getStudentID() == studentID)
 				return r;
 		}
@@ -93,46 +98,48 @@ public class Unit implements IUnit {
 	}
 
 	public StudentUnitRecordList listStudentRecords() {
-		return rs;
+		return result;
 	}
 
 	@Override
 	public int getAsg1Weight() {
-		return a1;
+		return a1_;
 	}
 
 	@Override
 	public int getAsg2Weight() {
-		return a2;
+		return a2_;
 	}
 
 	@Override
 	public int getExamWeight() {
-		return ex;
+		return ex_;
 	}
 
 	@Override
 	public void setAssessmentWeights(int a1, int a2, int ex) {
 		if (a1 < 0 || a1 > 100 ||
-			a2 < 0 || a2 > 100 ||
-			ex < 0 || ex > 100 ) {
-			throw new RuntimeException("Assessment weights cant be less than zero or greater than 100");
+				a2 < 0 || a2 > 100 ||
+				ex < 0 || ex > 100 ) {
+			throw new RuntimeException("Assessment weights cant "
+					+ "be less than zero or greater than 100");
 		}			
 		if (a1 + a2 + ex != 100) {
 			throw new RuntimeException("Assessment weights must add to 100");
 		}
-		this.a1 = a1;
-		this.a2 = a2;
-		this.ex = ex;			
+		this.a1_ = a1;
+		this.a2_ = a2;
+		this.ex_ = ex;			
 	}
-	
+
 	private void setCutoffs( float ps, float cr, float di, float hd, float ae) {
 		if (ps < 0 || ps > 100 ||
-			cr < 0 || cr > 100 ||
-			di < 0 || di > 100 ||
-			hd < 0 || hd > 100 ||
-			ae < 0 || ae > 100 ) {
-			throw new RuntimeException("Assessment cutoffs cant be less than zero or greater than 100");
+				cr < 0 || cr > 100 ||
+				di < 0 || di > 100 ||
+				hd < 0 || hd > 100 ||
+				ae < 0 || ae > 100 ) {
+			throw new RuntimeException("Assessment cutoffs cant be "
+					+ "less than zero or greater than 100");
 		}
 		if (ae >= ps) {
 			throw new RuntimeException("AE cutoff must be less than PS cutoff");
@@ -148,29 +155,30 @@ public class Unit implements IUnit {
 		}
 
 	}
-	
+
 	public String getGrade(float f1, float f2, float f3) {
 		float t = f1 + f2 + f3;
-		
-		if (f1 < 0 || f1 > a1 ||
-			f2 < 0 || f2 > a2 ||
-			f3 < 0 || f3 > ex ) {
-			throw new RuntimeException("marks cannot be less than zero or greater than assessment weights");
+
+		if (f1 < 0 || f1 > a1_ ||
+				f2 < 0 || f2 > a2_ ||
+				f3 < 0 || f3 > ex_ ) {
+			throw new RuntimeException("marks cannot be less than zero "
+					+ "or greater than assessment weights");
 		}
 
-		if (t < co5) {
+		if (t < co5_) {
 			return "FL";
-		} else if (t < co2)
+		} else if (t < co2_)
 			return "AE";
-		else if (t < co1)
+		else if (t < co1_)
 			return "PS";
-		else if (t < co4)
+		else if (t < co4_)
 			return "CR";
-		else if (t < co3)
+		else if (t < co3_)
 			return "DI";
 		else
 			return "HD";
 	}
 
-	
+
 }
